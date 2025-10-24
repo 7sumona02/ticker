@@ -14,9 +14,9 @@ const Page = () => {
   const [direction, setDirection] = useState('horizontal')
 
   return (
-    <div className='min-h-screen w-screen flex items-center bg-[#5652f5] text-[#bcb8b8]'>
+    <div className='min-h-screen w-screen flex md:flex-row flex-col md:gap-0 gap-15 items-center bg-[#5652f5] text-[#bcb8b8] md:pt-0 pt-15'>
       {/* Left Section */}
-      <div className={`w-[60%] ${pixel.className} text-5xl flex flex-col justify-center items-center`}>
+      <div className={`md:w-[60%] w-full ${pixel.className} text-5xl flex flex-col justify-center items-center`}>
         <div className="space-y-5">
           <div>Ticker</div>
           <div className="font-mono text-sm max-w-sm">
@@ -50,7 +50,7 @@ const Page = () => {
       </div>
 
       {/* Right Section - show ticker based on state */}
-      <div className="w-full h-screen flex items-center justify-center border-l">
+      <div className="w-full md:h-screen h-fit flex items-center justify-center border-l">
         {direction === 'horizontal' && <HorizontalTicker />}
         {direction === 'vertical' && <VerticalTicker />}
         {!direction && (
