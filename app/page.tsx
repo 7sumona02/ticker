@@ -3,6 +3,7 @@ import { Pixelify_Sans } from "next/font/google"
 import { useState } from "react"
 import HorizontalTicker from '@/components/HorizontalTicker'
 import VerticalTicker from '@/components/VerticalTicker'
+import Link from "next/link"
 
 const pixel = Pixelify_Sans({
   weight: '400',
@@ -39,9 +40,11 @@ const Page = () => {
           </div>
 
           <div>
+            <Link href='https://github.com/7sumona02/ticker/tree/main/components'>
             <div className="bg-black w-full py-2 text-[#bcb8b8] text-sm text-center cursor-pointer">
               GET THE CODE
             </div>
+            </Link>
           </div>
         </div>
       </div>
